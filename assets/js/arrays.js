@@ -111,18 +111,41 @@ console.log(arr);
 
 // ¿Que hace la función slice? De un ejemplo donde use su nombre completo
 
-let miNombre = ["william", "Steve", "Matallana", "Triviño"];
+// let miNombre = ["william", "Steve", "Matallana", "Triviño"];
 
-// Cree un arreglo con los apellidos, usando slice1
+// // Cree un arreglo con los apellidos, usando slice1
 
-let apellidos = miNombre.slice(-3, -2);
+// let apellidos = miNombre.slice(-3, -2);
 
-console.log(apellidos);
-console.log(miNombre);
+// console.log(apellidos);
+// console.log(miNombre);
 
 let nombre = ["Juam", "Mateo"];
 let apellido = ["Morales", "Quintero"];
 
 let nombreCompleto = nombre.concat(apellido, "No", "Existe", "en", "la", "vida", "real");
 console.log(nombreCompleto);
-console.log(apellido);
+
+// forEach
+
+// ["Mateo", "Marcos", "Lucas", "Juan", "Maria", "Magdalena"].forEach((item, index, array) => {
+//     console.info(` ${item} tiene el índice ${index} en ${array}`);
+// });
+
+// ["Mateo", "Marcos", "Lucas", "Juan", "Maria", "Magdalena"].forEach(alert);
+
+/* 
+indexOf | lastIndexOf | includes => ¿Para que sirven? De un ejemplo para cada uno con arreglos que involucren su nombre
+*/
+
+let miNombre = ["william", "Steve", "Matallana", "Triviño"];
+
+// indexOf
+console.log(miNombre.indexOf("william"));
+
+// lastIndexOf
+console.log(miNombre.lastIndexOf("Matallana"));
+
+// includes
+console.log(miNombre.includes("Matallana"));
+console.log(miNombre.includes("Hernández"));
