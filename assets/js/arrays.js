@@ -82,6 +82,47 @@ console.log(fruits);
 
 console.log(fruits.length);
 // Truncando el arreglo
-fruits.length = 2;
+fruits.length = 4;
 console.log(fruits.length);
 console.log(fruits);
+
+// delete fruits[1];
+// console.log(fruits.length);
+// console.log(fruits[1]);
+// console.log(fruits);
+
+// splice
+
+fruits.splice(1, 1); // desde el indice 1, elimine 1 elemento
+console.log(fruits.length);
+console.log(fruits);
+
+
+
+arr = ["Yo", "estudio", "JavaScript", "en", "el", "SENA"];
+console.log(arr);
+arr.splice(1, 2, "voy", "a", "bailar");
+console.log(arr);
+let datos = arr.splice(1, 3);
+console.log(datos);
+console.log(arr);
+arr.splice(1, 0, "estudio", "JavaScript",);
+console.log(arr);
+
+// ¿Que hace la función slice? De un ejemplo donde use su nombre completo
+
+let miNombre = ["william", "Steve", "Matallana", "Triviño"];
+
+// Cree un arreglo con los apellidos, usando slice1
+
+let apellidos = miNombre.slice(-3, -2);
+
+console.log(apellidos);
+console.log(miNombre);
+
+let nombre = ["Juam", "Mateo"];
+let apellido = ["Morales", "Quintero"];
+
+let nombreCompleto = nombre.concat(apellido, "No", "Existe", "en", "la", "vida", "real");
+console.log(nombreCompleto);
+console.log(apellido);
