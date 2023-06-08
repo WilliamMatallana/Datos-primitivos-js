@@ -138,14 +138,123 @@ console.log(nombreCompleto);
 indexOf | lastIndexOf | includes => ¿Para que sirven? De un ejemplo para cada uno con arreglos que involucren su nombre
 */
 
-let miNombre = ["william", "Steve", "Matallana", "Triviño"];
+// let miNombre = ["william", "Steve", "Matallana", "Triviño"];
 
-// indexOf
-console.log(miNombre.indexOf("william"));
+// // indexOf
+// console.log(miNombre.indexOf("william"));
 
-// lastIndexOf
-console.log(miNombre.lastIndexOf("Matallana"));
+// // lastIndexOf
+// console.log(miNombre.lastIndexOf("Matallana"));
 
-// includes
-console.log(miNombre.includes("Matallana"));
-console.log(miNombre.includes("Hernández"));
+// // includes
+// console.log(miNombre.includes("Matallana"));
+// console.log(miNombre.includes("Hernández"));
+
+// find 
+
+let users = [
+    {id: 1, name: "Mateo"},
+    {id: 2, name: "Marcos"},
+    {id: 3, name: "Lucas"},
+    {id: 4, name: "Juan"},
+    {id: 5, name: "Mateo"},
+    {id: 6, name: "Maria"},
+];
+
+// let result = arr.find(function(item, index, array) {/*cuerpo*/});
+
+let user = users.find(item => item.id == 3);
+
+console.log(user);
+console.log(user.name);
+
+// findIndex
+
+console.log(users.findIndex(user => user.name == "Maria"));
+console.log(users.findIndex(user => user.name == "Pedro"));
+console.log(users.findIndex(user => user.name == "Mateo"));
+
+// findLastIndex
+console.log(users.findLastIndex(user => user.name == "Mateo"));
+
+// filter
+// let result = arr.find(function(item, index, array) {/*cuerpo*/});
+
+let some_user = users.filter(item => item.name == "Mateo");
+console.log(some_user.length);
+console.log(some_user);
+
+some_user.forEach(user => console.log(user.name));
+
+some_user = users.filter(item => item.id < 3);
+some_user.forEach(user => console.log(user.name));
+
+//---------------------------
+// Transformar un array
+//---------------------------
+
+// map
+// let result = arr.map(function(item, index, array) {/*cuerpo*/});
+
+let lengths = users.map(item => item.name.length);
+console.log(lengths);
+
+let numbers = [8, 4, 15, 1, 7, 0, 2];
+
+let doubles = numbers.map(numbers => numbers *2);
+console.log(numbers);
+console.log(doubles);
+
+// sort
+
+numbers.sort();
+console.log(numbers);
+
+function comparar_numeros(a, b) {
+    if( a > b) return 1;
+    if( a == b) return 0;
+    if( a < b) return -1;
+};
+
+numbers.sort(comparar_numeros);
+console.log(numbers);
+
+// reverse
+
+numbers.reverse();
+console.log(numbers);
+
+// split
+
+let nombres = `Mateo
+Marcos
+Lucas
+Juan
+`;
+
+let nombresArr = nombres.split("\n");
+console.log(nombresArr);
+
+nombresArr = nombresArr.filter(item => item != "");
+console.log(nombresArr);
+
+// reduce / reduceRight
+
+// let value = arr.reduce(function (acumulador, item, index, array) {
+
+// }, inicio);
+
+numbers = [23, 5, 17, 38, 24];
+
+let suma = numbers.reduce((total, num) => total + num, 0);
+console.log(suma);
+suma = numbers.reduceRight((total, num) => total + num);
+console.log(suma);
+
+console.log("----------------------");
+
+console.log(typeof{});
+console.log(typeof[]);
+
+console.log(Array.isArray({}));
+console.log(Array.isArray([]));
