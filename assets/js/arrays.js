@@ -258,3 +258,8 @@ console.log(typeof[]);
 
 console.log(Array.isArray({}));
 console.log(Array.isArray([]));
+
+// join
+
+let nombresStr = nombresArr.join(";");
+console.log(nombresStr);
