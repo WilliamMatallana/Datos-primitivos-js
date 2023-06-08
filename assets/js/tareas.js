@@ -6,8 +6,10 @@ convertirEnCamel('una-cadena-corta')
 => unaCadenaCorta
 
 */
-
+/*
 let ejemplo = prompt("Ingrese las palabras separadas por guion");
+
+let minus = ejemplo.toLowerCase();
 
 function convertirEnCamel(palabrasConGuion) {
   let palabras = palabrasConGuion.split("-");
@@ -22,5 +24,16 @@ function convertirEnCamel(palabrasConGuion) {
   return resultado;
 }
   
-console.log(convertirEnCamel(ejemplo));
-  
+console.log(convertirEnCamel(minus));
+*/
+
+/*escribir la función filtrarRango(arreglo, a, b) que obtenga un arreglo, busque los elemntos con valor mayor o igual a 'a' y menor o igual a 'b' y devuelva un arreglo con los resultados*/
+
+let numbers = [1, 2, 7, 4, 3, 6, 10, 8, 9, 5];
+
+function filtrarRango(arreglo, a, b) {
+  return arreglo.filter(elemento => elemento >= a && elemento <= b);
+}
+
+console.log(filtrarRango(numbers, 5, 8));
+console.log(numbers);
